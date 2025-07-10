@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register Surat Masuk</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="darkmode-toggle">
+    <label><input type="checkbox" id="toggleDark" /> 🌙 Dark Mode</label>
+  </div>
+  <div class="container">
+    <div class="form-card">
+      <h2>Register Surat Masuk</h2>
+      <form id="suratForm">
+        <input type="hidden" name="id" />
+        <label>Tanggal Terima:<input type="date" name="tanggal_terima" required /></label>
+        <label>Kode Arsip:<input type="text" name="kode_arsip" required /></label>
+        <label>Tanggal Surat:<input type="date" name="tanggal_surat" required /></label>
+        <label>Nomor Surat:<input type="text" name="nomor_surat" required /></label>
+        <label>Asal Surat:<input type="text" name="asal_surat" required /></label>
+        <label>Isi Ringkas:<textarea name="isi_ringkas" rows="2" required></textarea></label>
+        <label>Unit Pengolah:<input type="text" name="unit_pengolah" required /></label>
+        <button type="submit">Simpan</button>
+        <div class="success" id="successMsg">✅ Data disimpan</div>
+      </form>
+    </div>
+    <div class="table-card">
+      <input type="text" id="searchBox" placeholder="🔍 Cari surat..." />
+      <table id="dataTable"><thead>
+        <tr><th>No</th><th>Nomor Surat</th><th>Asal</th><th>Isi</th><th>Aksi</th></tr>
+      </thead><tbody></tbody></table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
